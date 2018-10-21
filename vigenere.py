@@ -3,15 +3,15 @@
 # Vigenere (Python)
 # 25 October 2018
 
-import sys
+from sys import argv, exit
 from cs50 import get_string
 
 # Ensures that the usage is correct and key is entirely alphabetical
-if len(sys.argv) != 2 or sys.argv[1].isalpha() == False:
-    sys.exit("Usage: python vigenere.py k")
+if len(argv) != 2 or argv[1].isalpha() == False:
+    exit("Usage: python vigenere.py k")
 
 # Declares a string variable for the key that is uppercase since case doesn't matter
-keyword = sys.argv[1].upper()
+keyword = argv[1].upper()
 
 # Declares an int variable to keep track of which character in the keyword should be used
 counter = 0
